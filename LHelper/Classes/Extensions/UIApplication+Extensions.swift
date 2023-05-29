@@ -8,11 +8,11 @@
 import UIKit
 
 public extension UIApplication {
-    var appVersion: String {
+    class var appVersion: String {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
     }
     
-    var appBuildNumber: String {
+    class var appBuildNumber: String {
         let obj = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion")
         if let string = obj as? String {
             return string
@@ -25,7 +25,7 @@ public extension UIApplication {
         return "Unknown"
     }
     
-    var appName: String {
+    class var appName: String {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? "Unknown"
     }
 }
