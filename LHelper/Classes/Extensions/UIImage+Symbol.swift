@@ -20,7 +20,7 @@ public extension UIImage {
 }
 
 public extension UIImage {
-    class func symbol(_ name: AppSymbol, size: CGFloat = 30, weight: SymbolWeight = .medium, scale: SymbolScale = .medium) -> UIImage? {
+    class func symbol(_ name: AppSymbol, size: CGFloat = 30, weight: SymbolWeight = .medium, scale: SymbolScale = .large) -> UIImage? {
         let config = UIImage.SymbolConfiguration(pointSize: size, weight: weight, scale: scale)
         return UIImage(systemName: name.rawValue, withConfiguration: config)
     }
